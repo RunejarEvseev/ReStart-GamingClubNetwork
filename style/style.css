@@ -1,0 +1,241 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* fonts */
+@font-face {
+  font-family: 'Montserrat';
+  src: local('MontserratRegular'), local('Montserrat-Regular'),
+    url(../fonts/montserratregular.woff) format('woff'),
+    url(../fonts/montserratregular.woff2) format('woff2');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: local('MontserratSemibold'), local('Montserrat-Semibold'),
+    url(../fonts/montserratsemibold.woff) format('woff'),
+    url(../fonts/montserratsemibold.woff2) format('woff2');
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: local('MontserratBold'), local('Montserrat-Bold'),
+    url(../fonts/montserratbold.woff) format('woff'),
+    url(../fonts/montserratbold.woff2) format('woff2');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: local('MontserratExtrabold'), local('Montserrat-Extrabold'),
+    url(../fonts/montserratextrabold.woff) format('woff'),
+    url(../fonts/montserratextrabold.woff2) format('woff2');
+  font-display: swap;
+  font-weight: 800;
+  font-style: normal;
+}
+
+:root {
+  --color-white: #FFF;
+  --color-dark: #000;
+  /* --color-dark-grey: #666; */
+  --color-default: #16171B;
+  --color-accent: #F2C94C;
+  --color-active: #F2C94C;
+  /* --color-dirty: #CACACA;
+  --color-graphite: #414141;
+  --gap: 32px; */
+}
+
+body {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  color: var(--color-dark);
+  /* background-color: var(--color-default); */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 25px 39px;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 28px;
+  border: none;
+  cursor: pointer;
+  line-height: 28px;
+  text-align: center;
+  background: var(--color-accent);
+  color: var(--color-default);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn--crop {
+  clip-path: polygon(100% 0,100% 65%,89% 100%,0 100%,0 0);
+}
+
+.btn a {
+  outline: 0;
+}
+
+.btn:focus-visible,
+.btn:hover {
+  outline: 0;
+  background-color: var(--color-accent);
+}
+
+.btn:active {
+  background-color: var(--color-active);
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.site-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 48px;
+  color: var(--color-dark);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+p {
+  display: block
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  background: var(--color-default);
+}
+
+.site-title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 59px;
+  color: var(--color-dark);
+}
+
+.flex {
+  display: flex;
+}
+
+/* header */
+.header {
+  width: 100%;
+  /* margin-bottom: 40px; */
+  align-items: center;
+  /* position: fixed;
+  left: 0;
+  z-index: 50;   */
+  background-color: var(--color-default);
+}
+
+.header__container {
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 14px 75px;
+}
+
+.header__logo {
+  width: 324px;
+}
+
+.header__menu {
+  justify-content: space-between;
+}
+
+.header-nav {
+  margin-right: auto;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 85px;
+}
+
+.nav__list {
+  align-items: center;
+  margin-top: -5px;
+}
+
+.nav__link {
+  position: relative;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--color-white);
+  transition: color 0.3s ease-in-out;
+}
+
+.nav__link:focus-visible {
+  outline: 0;
+  outline-offset: 5px;
+  outline: 2px dashed var(--color-accent);
+}
+
+.nav__link:hover {
+  color: var(--color-accent);
+}
+
+.nav__link:active {
+  color: var(--color-active);
+  border-bottom: 2px dashed var(--color-active);
+}
+
+.booking_btn {
+  margin-left: 0;
+  padding: 22px 32px;
+  font-weight: 600;
+}
+
+/* hero */
+.hero__container {
+  min-height: 860px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background-image: url(../img/hero_bg_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
