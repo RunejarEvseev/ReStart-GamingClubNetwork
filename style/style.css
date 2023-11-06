@@ -268,3 +268,27 @@ img {
   margin-bottom: 100px;
   gap: var(--gap);
 }
+
+/* club */
+.club {
+  padding: 50px 75px;
+  background-color: var(--color-default);
+}
+
+.club__container {
+  background-color: var(--color-default);
+  color: var(--color-white);
+}
+
+.club__title {
+  margin-bottom: 22px;
+  color: var(--color-white);
+}
+
+.club__descr {
+  max-width: 1235px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
