@@ -55,7 +55,7 @@ html {
   /* --color-dark-grey: #666; */
   --color-default: #16171B;
   --color-accent: #F2E437;
-  --color-active: #F2C94C;
+  --color-active: #FFD10A;
   /* --color-dirty: #CACACA;
   --color-graphite: #414141;
   --gap: 32px; */
@@ -242,11 +242,11 @@ img {
 /* about */
 .about {
   padding: 50px 75px;
-  background-color: var(--color-accent);
+  background-color: var(--color-active);
 }
 
 .about__container {
-  background-color: var(--color-accent);
+  background-color: var(--color-active);
   color: var(--color-default);
 }
 
@@ -267,6 +267,21 @@ img {
   max-height: 100%;
   margin-bottom: 100px;
   gap: var(--gap);
+}
+
+/* price */
+.price{
+  background-color: var(--color-dark);
+}
+.price__container {
+  max-width: 1440px;
+  min-height: 860px;
+  margin: 0 auto;
+  margin-left: 0;
+  background-image: url(../img/club_price.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
 
 /* club */
